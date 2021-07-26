@@ -1,0 +1,31 @@
+name: Default
+on: push
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  preflight_check:
+    name: Preflight Check
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        uses: wealthsimple/toolbox-script@v1
+        with:
+          script: toolbox.javascript.dependencies.run()
+          nexus_npm_token: ${{ secrets.NEXUS_NPM_DEV_TOKEN }}
+          nexus_npm_url: ${{ secrets.NEXUS_NPM_URL }}
+      - name: Lint
+        uses: wealthsimple/toolbox-script@v1
+        with:
+          script: toolbox.javascript.lint.run()
+      - name: Security
+        uses: wealthsimple/toolbox-script@v1
+        with:
+          script: toolbox.javascript.security.run()
+      - name: Unit Tests
+        uses: wealthsimple/toolbox-script@v1
+        with:
+          sonarqube_host: ${{ secrets.SONAR_HOST_URL }}
+          sonarqube_token: ${{ secrets.SONAR_LOGIN_TOKEN }}
+          script: toolbox.javascript.test.run()

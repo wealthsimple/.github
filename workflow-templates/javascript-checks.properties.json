@@ -1,0 +1,12 @@
+{
+  "name": "Javascript Workflow - Checks",
+  "description": "Workflow that only contains Javascript preflight_check",
+  "iconName": "example-icon",
+  "categories": [
+      "JavaScript",
+      "TypeScript"
+  ],
+  "filePatterns": [
+      "package.json$"
+  ]
+}
