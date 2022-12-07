@@ -12,6 +12,17 @@ Please follow the [Pull Request Process](https://backstage.iad.w10e.com/docs/def
 
 * <!-- Bullets for test cases covered -->
 
+### Security 🛡 (required)
+#### Checklist
+<!-- Please review the checklist for any potential security risks/vulnerabilities  -->
+- [ ] Reviewed the [Checklist](https://docs.google.com/document/d/1wT4XI3eaXkb_fWTF4gyKP_0HFjjznA4AkEII0W-imKo/edit)
+#### How does this PR handle security?
+<!--
+What steps are you taking to ensure there are no vulnerabilities? Examples include:
+"My PR is not logging any sensitive info"
+"I'm doing the appropriate authentication & authorization checks"
+-->
+
 ### Screenshot
 <!-- If you can, provide a screenshot or a video of the changes as an image is worth a thousand words -->
 
