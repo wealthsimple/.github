@@ -1,7 +1,7 @@
 Please follow the [Pull Request Process](https://www.notion.so/wealthsimple/Pull-Requests-and-Code-Reviews-b30b2fd48aa74f2e8b0b7433d446f561?pvs=4) while creating your Pull Request. You can use the below template to help you structure your thoughts.
 
 ### Jira Ticket
-<!-- If your PR addresses a Jira ticket, link it here -->
+<!-- Please include a link to an associated JIRA ticket. Hotfixes / Incidents do not require JIRA tickets, but most changes should be scoped and tracked. -->
 https://wealthsimple.atlassian.net/browse/JIRA-1234
 
 ### Why
